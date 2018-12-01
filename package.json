@@ -1,21 +1,24 @@
 {
   "name": "advent-of-code",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {},
+  "description": "My solutions for the Advent of Code code challenges",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fvanwijk/advent-of-code.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "advent",
+    "code",
+    "XebiaAoC"
+  ],
+  "author": "Frank van Wijk <fvanwijk@xebia.com> (http://www.frankvanwijk.nl)",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/fvanwijk/advent-of-code/issues"
   },
-  "homepage": "https://github.com/fvanwijk/advent-of-code#readme",
+  "homepage": "https://github.com/fvanwijk/advent-of-code",
   "dependencies": {
+    "js-combinatorics": "0.5.3",
     "prettier": "1.15.3"
   }
 }

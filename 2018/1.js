@@ -1,23 +1,17 @@
 const f = require('../helpers').getFileSync('1');
 
 const input = f.split('\n');
-let found = false;
 let sum = 0;
 let keys = {};
 
-function repeat() {
-  for (i = 0; i < input.length; i++) {
-    sum = sum + +input[i];
-    if (keys[sum]) {
-      found = true;
-      break;
-    }
-    keys[sum] = true;
+let i = 0;
+while (true) {
+  sum = sum + +input[i % input.length];
+  if (keys[sum]) {
+    break;
   }
-}
-
-while (!found) {
-  repeat();
+  keys[sum] = true;
+  i++;
 }
 
 console.log('Part 1:', input.reduce((a, b) => +b + a, 0));

@@ -1,3 +1,4 @@
+const zip = require('lodash').zip;
 const h = require('../helpers');
 const f = h.getFileSync('2');
 
@@ -25,3 +26,25 @@ const eq = input.reduce(
 );
 
 console.log('Part 1:', eq.reduce((a, b) => a * b));
+
+let found = false;
+for (i = 0; i < input.length; i++) {
+  const cs = input[i].split('');
+  input.forEach(l2 => {
+    const equalString = zip(cs, l2.split(''))
+      .reduce(
+        (mem2, pair) => (pair[0] === pair[1] ? [...mem2, pair[0]] : mem2),
+        []
+      )
+      .join('');
+
+    if (equalString.length === cs.length - 1) {
+      console.log('Part 2', equalString);
+      found = true;
+    }
+  });
+
+  if (found) {
+    break;
+  }
+}

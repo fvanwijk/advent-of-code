@@ -19,6 +19,7 @@
   "homepage": "https://github.com/fvanwijk/advent-of-code",
   "dependencies": {
     "js-combinatorics": "0.5.3",
+    "lodash": "4.17.11",
     "prettier": "1.15.3"
   }
 }

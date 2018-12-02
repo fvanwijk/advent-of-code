@@ -10,5 +10,9 @@ module.exports = {
         cb(data);
       }
     });
+  },
+  increment(o, k, v) {
+    o[k] = (o[k] || 0) + v;
+    return o;
   }
 };

@@ -17,9 +17,34 @@
     "url": "https://github.com/fvanwijk/advent-of-code/issues"
   },
   "homepage": "https://github.com/fvanwijk/advent-of-code",
+  "files": [
+    "dist"
+  ],
+  "main": "2019/dist/index.js",
+  "module": "2019/dist/advent-of-code-ts.esm.js",
+  "typings": "2019/dist/index.d.ts",
   "dependencies": {
     "js-combinatorics": "0.5.3",
-    "lodash": "4.17.11",
-    "prettier": "1.15.3"
+    "lodash": "4.17.11"
+  },
+  "devDependencies": {
+    "@types/jest": "24.0.23",
+    "husky": "3.1.0",
+    "prettier": "1.15.3",
+    "tsdx": "0.11.0",
+    "tslib": "1.10.0",
+    "typescript": "3.7.2"
+  },
+  "peerDependencies": {},
+  "scripts": {
+    "start": "tsdx watch --entry=./2019/index.ts --format=esm",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint 2019"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
   }
 }

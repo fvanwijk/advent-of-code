@@ -25,7 +25,7 @@
   "typings": "2019/dist/index.d.ts",
   "dependencies": {
     "js-combinatorics": "0.5.3",
-    "lodash": "4.17.11"
+    "lodash": "4.17.21"
   },
   "devDependencies": {
     "@types/jest": "24.0.23",
